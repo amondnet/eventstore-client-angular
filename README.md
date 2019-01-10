@@ -1,4 +1,4 @@
-## eventstore-client@1.0.0-SNAPSHOT.201901101059
+## eventstore-client@1.0.0-SNAPSHOT.201901101109
 
 ### Building
 
@@ -19,7 +19,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install eventstore-client@1.0.0-SNAPSHOT.201901101059 --save
+npm install eventstore-client@1.0.0-SNAPSHOT.201901101109 --save
 ```
 
 _without publishing (not recommended):_
