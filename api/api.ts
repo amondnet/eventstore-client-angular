@@ -1,0 +1,17 @@
+export * from './admin.service';
+import { AdminService } from './admin.service';
+export * from './gossip.service';
+import { GossipService } from './gossip.service';
+export * from './info.service';
+import { InfoService } from './info.service';
+export * from './projections.service';
+import { ProjectionsService } from './projections.service';
+export * from './stats.service';
+import { StatsService } from './stats.service';
+export * from './streams.service';
+import { StreamsService } from './streams.service';
+export * from './subscriptions.service';
+import { SubscriptionsService } from './subscriptions.service';
+export * from './users.service';
+import { UsersService } from './users.service';
+export const APIS = [AdminService, GossipService, InfoService, ProjectionsService, StatsService, StreamsService, SubscriptionsService, UsersService];
