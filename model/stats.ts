@@ -9,12 +9,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { StatsProc } from './statsProc';
+import { StatsEs } from './statsEs';
+import { StatsSys } from './statsSys';
 
 
-export interface StreamData { 
-    /**
-     * Event data
-     */
-    body: object;
+export interface Stats { 
+    proc?: StatsProc;
+    sys?: StatsSys;
+    es?: StatsEs;
 }
 

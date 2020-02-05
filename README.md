@@ -1,4 +1,4 @@
-## eventstore-client@1.0.0-SNAPSHOT.201901101109
+## eventstore-client-angular@5.0.4
 
 ### Building
 
@@ -10,7 +10,7 @@ npm run build
 
 ### publishing
 
-First build the package than run ```npm publish dist``` (don't forget to specify the `dist` folder!)
+First build the package then run ```npm publish dist``` (don't forget to specify the `dist` folder!)
 
 ### consuming
 
@@ -19,14 +19,16 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install eventstore-client@1.0.0-SNAPSHOT.201901101109 --save
+npm install eventstore-client-angular@5.0.4 --save
 ```
 
 _without publishing (not recommended):_
 
 ```
-npm install PATH_TO_GENERATED_PACKAGE/dist --save
+npm install PATH_TO_GENERATED_PACKAGE/dist.tgz --save
 ```
+
+_It's important to take the tgz file, otherwise you'll get trouble with links on windows_
 
 _using `npm link`:_
 
@@ -37,7 +39,7 @@ npm link
 
 In your project:
 ```
-npm link eventstore-client
+npm link eventstore-client-angular
 ```
 
 __Note for Windows users:__ The Angular CLI has troubles to use linked npm packages.
@@ -52,7 +54,7 @@ In your Angular project:
 
 ```
 // without configuring providers
-import { ApiModule } from 'eventstore-client';
+import { ApiModule } from 'eventstore-client-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -72,7 +74,7 @@ export class AppModule {}
 
 ```
 // configuring providers
-import { ApiModule, Configuration, ConfigurationParameters } from 'eventstore-client';
+import { ApiModule, Configuration, ConfigurationParameters } from 'eventstore-client-angular';
 
 export function apiConfigFactory (): Configuration => {
   const params: ConfigurationParameters = {
@@ -91,7 +93,7 @@ export class AppModule {}
 ```
 
 ```
-import { DefaultApi } from 'eventstore-client';
+import { DefaultApi } from 'eventstore-client-angular';
 
 export class AppComponent {
 	 constructor(private apiGateway: DefaultApi) { }
@@ -101,8 +103,8 @@ export class AppComponent {
 Note: The ApiModule is restricted to being instantiated once app wide.
 This is to ensure that all services are treated as singletons.
 
-#### Using multiple swagger files / APIs / ApiModules
-In order to use multiple `ApiModules` generated from different swagger files,
+#### Using multiple OpenAPI files / APIs / ApiModules
+In order to use multiple `ApiModules` generated from different OpenAPI files,
 you can create an alias name when importing the modules
 in order to avoid naming conflicts:
 ```
@@ -130,7 +132,7 @@ export class AppModule {
 If different than the generated base path, during app bootstrap, you can provide the base path to your service. 
 
 ```
-import { BASE_PATH } from 'eventstore-client';
+import { BASE_PATH } from 'eventstore-client-angular';
 
 bootstrap(AppComponent, [
     { provide: BASE_PATH, useValue: 'https://your-web-service.com' },
@@ -139,7 +141,7 @@ bootstrap(AppComponent, [
 or
 
 ```
-import { BASE_PATH } from 'eventstore-client';
+import { BASE_PATH } from 'eventstore-client-angular';
 
 @NgModule({
     imports: [],
@@ -163,7 +165,7 @@ export const environment = {
 
 In the src/app/app.module.ts:
 ```
-import { BASE_PATH } from 'eventstore-client';
+import { BASE_PATH } from 'eventstore-client-angular';
 import { environment } from '../environments/environment';
 
 @NgModule({

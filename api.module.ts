@@ -16,15 +16,7 @@ import { UsersService } from './api/users.service';
   imports:      [],
   declarations: [],
   exports:      [],
-  providers: [
-    AdminService,
-    GossipService,
-    InfoService,
-    ProjectionsService,
-    StatsService,
-    StreamsService,
-    SubscriptionsService,
-    UsersService ]
+  providers: []
 })
 export class ApiModule {
     public static forRoot(configurationFactory: () => Configuration): ModuleWithProviders {

@@ -1,0 +1,1 @@
+openapi-generator generate -i  https://raw.githubusercontent.com/EventStore/documentation/master/http-api/swagger.json -g typescript-angular  -c .dev/config.yml -o ./

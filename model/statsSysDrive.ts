@@ -9,12 +9,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { StatsSysDriveDriveName } from './statsSysDriveDriveName';
 
 
-export interface StreamData { 
-    /**
-     * Event data
-     */
-    body: object;
+/**
+ * Drive usage stats
+ */
+export interface StatsSysDrive { 
+    driveName?: StatsSysDriveDriveName;
 }
 

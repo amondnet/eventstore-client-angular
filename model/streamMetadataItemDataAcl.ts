@@ -11,14 +11,29 @@
  */
 
 
-export interface PasswordChangeItem { 
+/**
+ * Access control list for this stream
+ */
+export interface StreamMetadataItemDataAcl { 
     /**
-     * The current password for the user
+     * Read roles
      */
-    currentPassword?: string;
+    r?: string;
     /**
-     * The new password for the user
+     * Write roles
      */
-    newPassword?: string;
+    w?: string;
+    /**
+     * Delete roles
+     */
+    d?: string;
+    /**
+     * Metadata read roles
+     */
+    mr?: string;
+    /**
+     * Metadata write roles
+     */
+    mw?: string;
 }
 

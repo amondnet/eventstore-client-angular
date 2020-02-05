@@ -1,0 +1,5 @@
+npmName: "eventstore-client-angular"
+npmVersion: "5.0.4"
+#npmRepository : "https://npm.pkg.github.com/"
+snapshot : false
+ngVersion": "8.0.0"

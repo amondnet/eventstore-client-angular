@@ -9,12 +9,21 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { StatsSysDrive } from './statsSysDrive';
 
 
-export interface StreamData { 
+/**
+ * System usage stats
+ */
+export interface StatsSys { 
     /**
-     * Event data
+     * Total CPU usage in percentage
      */
-    body: object;
+    cpu?: number;
+    /**
+     * Free memory in bytes
+     */
+    freeMem?: number;
+    drive?: StatsSysDrive;
 }
 
